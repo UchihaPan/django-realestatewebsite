@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'pages',
     'listings',
     'realtors',
-
     'accounts',
+    'contacts',
 ]
 
 MIDDLEWARE = [
@@ -129,8 +129,13 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 MESSAGE_TAGS = {
-    messages.ERROR: 'danger'
+    messages.ERROR: 'danger',
 }
+EMAIL_USE_TLS=True
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='tonypankaj2@gmail.com'
+EMAIL_HOST_PASSWORD='Uchihamadara@1999'
+EMAIL_PORT=587
+
